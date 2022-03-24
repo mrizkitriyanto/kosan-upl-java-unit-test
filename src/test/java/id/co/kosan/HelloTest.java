@@ -11,6 +11,7 @@ class HelloTest {
 		Hello hello = new Hello();
 		String aktual = hello.SayHello();
 		assertEquals("Hello", aktual);
+		
 	}
 
 }
