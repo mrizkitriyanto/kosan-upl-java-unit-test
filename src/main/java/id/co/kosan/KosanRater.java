@@ -5,10 +5,10 @@ import java.math.RoundingMode;
 import java.util.List;
 
 public class KosanRater {
-	private static final BigDecimal BATAS_MURAH = new BigDecimal(6000.0);
-	private static final BigDecimal BATAS_NORMAL = new BigDecimal(8000.0);
+	private static final BigDecimal BATAS_MURAH = new BigDecimal(37500.0);
+	private static final BigDecimal BATAS_NORMAL = new BigDecimal(65000.0);
 	
-	public static int ratekosan(kosan kosan) {
+	public static int rateKosan(kosan kosan) {
 		if (kosan.getLuas() == 0.0) {
 			return -1;
 		}
@@ -29,7 +29,7 @@ public class KosanRater {
 		}
 		int sumRatings = 0;
 		for (kosan kosan : kosans) {
-			sumRatings += ratekosan(kosan);
+			sumRatings += rateKosan(kosan);
 		}
 		return sumRatings * 1.0 / kosans.size();	
 	}

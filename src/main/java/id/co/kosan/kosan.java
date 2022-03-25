@@ -6,7 +6,7 @@ public class kosan {
 	private double luas;
 	private BigDecimal harga;
 	
-	public kosan(double laus, BigDecimal harga) {
+	public kosan(double luas, BigDecimal harga) {
 		super();
 		this.luas = luas;
 		this.harga = harga;
@@ -20,7 +20,7 @@ public class kosan {
 	public BigDecimal getHarga() {
 		return harga;
 	}
-	public void setHarga(BigDecimal price) {
+	public void setHarga(BigDecimal harga) {
 		this.harga = harga;
 	}
 	@Override

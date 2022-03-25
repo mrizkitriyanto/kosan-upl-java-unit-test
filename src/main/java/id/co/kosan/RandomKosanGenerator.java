@@ -11,8 +11,8 @@ public class RandomKosanGenerator {
 
 	public RandomKosanGenerator() {
 		super();
-		this.minLuas = 30.0;
-		this.minHargaPerMeterKuadrat = new BigDecimal(3000.0);
+		this.minLuas = 10.0;
+		this.minHargaPerMeterKuadrat = new BigDecimal(300000.0);
 	}
 
 	public RandomKosanGenerator(double minLuas, BigDecimal minHargaPerMeterKuadrat) {
@@ -25,10 +25,10 @@ public class RandomKosanGenerator {
 		double maxLuas = minLuas * MAX_MULTIPLIER;
 		BigDecimal maxHargaPerMeterKuadrat = minHargaPerMeterKuadrat.multiply(new BigDecimal(MAX_MULTIPLIER));
 
-		double area = Math.round((minLuas + Math.random() * (maxLuas - minLuas)) * 10) / 10;
-		BigDecimal pricePerSquareMeter = minHargaPerMeterKuadrat
+		double luas = Math.round((minLuas + Math.random() * (maxLuas - minLuas)) * 10) / 10;
+		BigDecimal hargaPerSquareMeter = minHargaPerMeterKuadrat
 				.add((new BigDecimal(Math.random()).multiply(maxHargaPerMeterKuadrat.subtract(minHargaPerMeterKuadrat))));
-		BigDecimal price = pricePerSquareMeter.multiply(new BigDecimal(area)).setScale(1, RoundingMode.FLOOR);
-		return new kosan(area, price);
+		BigDecimal harga = hargaPerSquareMeter.multiply(new BigDecimal(luas)).setScale(1, RoundingMode.FLOOR);
+		return new kosan(luas, harga);
 	}
 }
