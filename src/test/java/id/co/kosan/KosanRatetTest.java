@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class KosanRatetTest {
 
 	@ParameterizedTest
-	@CsvSource(value = {"72.0, 250000.0, 0", "48.0, 350000.0, 1", "30.0, 600000.0, 2"})
+	@CsvSource(value = {"72.0, 250000.0, 0", "48.0, 2350000.0, 1", "30.0, 6000000.0, 2"})
 	void testRatingCorrect(Double luas, Double harga, int rating) {
 	
 		// harus menggembalikan rating yang benar
@@ -53,9 +53,9 @@ class KosanRatetTest {
 		
 		// yang di berikan
 		List<kosan> kosts = new ArrayList<>();
-		kosts.add(new kosan(72.0, new BigDecimal(250000.0)));
-		kosts.add(new kosan(48.0, new BigDecimal(350000.0)));
-		kosts.add(new kosan(30.0, new BigDecimal(600000.0)));
+		kosts.add(new kosan(10.0, new BigDecimal(550000.0)));
+		kosts.add(new kosan(40.0, new BigDecimal(2200000.0)));
+		kosts.add(new kosan(30.0, new BigDecimal(1650000.0)));
 
 		double expected = 1.0;
 		
