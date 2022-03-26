@@ -1,6 +1,8 @@
 package id.co.kosan;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class main {
 
@@ -24,6 +26,14 @@ public class main {
 		System.out.println(kost2.getLuas());
 		System.out.println(kost2.getHarga());
 
+		List<kosan> kosts = new ArrayList<>();
+		kosts.add(new kosan(10.0, new BigDecimal(550000.0)));
+		kosts.add(new kosan(40.0, new BigDecimal(2200000.0)));
+		kosts.add(new kosan(30.0, new BigDecimal(1650000.0)));
+		
+		double average = KosanRater.calculateAverageRating(kosts);
+		System.out.println(kosts);
+		System.out.println(average);
 	}
 
 }

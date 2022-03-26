@@ -5,8 +5,8 @@ import java.math.RoundingMode;
 import java.util.List;
 
 public class KosanRater {
-	private static final BigDecimal BATAS_MURAH = new BigDecimal(37500.0);
-	private static final BigDecimal BATAS_NORMAL = new BigDecimal(65000.0);
+	private static final BigDecimal BATAS_MURAH = new BigDecimal(37500.0); //Per meter persegi
+	private static final BigDecimal BATAS_NORMAL = new BigDecimal(65000.0); //Per meter persegi
 	
 	public static int rateKosan(kosan kosan) {
 		if (kosan.getLuas() == 0.0) {
