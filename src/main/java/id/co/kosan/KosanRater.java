@@ -10,23 +10,24 @@ public class KosanRater {
 	
 	public static int rateKosan(kosan kosan) {
 		if (kosan.getLuas() == 0.0) {
-			return -1;
+			return -1; // Error
 		}
 		BigDecimal ratio = kosan.getHarga().divide(new BigDecimal(kosan.getLuas()), RoundingMode.HALF_UP);
 		
 		if (ratio.compareTo(BATAS_MURAH) < 0) {
-			return 0;
+			return 0; //Kategori Murah
 		} else if (ratio.compareTo(BATAS_MURAH) >= 0 && ratio.compareTo(BATAS_NORMAL) < 0) {
-			return 1;
+			return 1; //Kategori Normal
 		} else {
-			return 2;
+			return 2; //Kategori Mahal
 		}
 	}
 	
 	public static double calculateAverageRating(List<kosan> kosans) {
+		//List Kosong akan mengembalikan nilai eksepsi
 		if (kosans.isEmpty()) {
 			throw new RuntimeException("Tidak bisa menghitung rate rata-rata untuk list yang kosong");
-		}
+		} 
 		int sumRatings = 0;
 		for (kosan kosan : kosans) {
 			sumRatings += rateKosan(kosan);

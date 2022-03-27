@@ -9,18 +9,21 @@ public class RandomKosanGenerator {
 	private double minLuas;
 	private BigDecimal minHargaPerMeterPersegi;
 
+	//Constructor Default
 	public RandomKosanGenerator() {
 		super();
 		this.minLuas = 10.0;
 		this.minHargaPerMeterPersegi = new BigDecimal(300000.0);
 	}
 
+	//Constructor Custom dengan Parameter
 	public RandomKosanGenerator(double minLuas, BigDecimal minHargaPerMeterPersegi) {
 		super();
 		this.minLuas = minLuas;
 		this.minHargaPerMeterPersegi = minHargaPerMeterPersegi;
 	}
 
+	//Fungsi Generate akan mengembalikan objek kosan random
 	public kosan generate() {
 		double maxLuas = minLuas * MAX_MULTIPLIER;
 		BigDecimal maxHargaPerMeterPersegi = minHargaPerMeterPersegi.multiply(new BigDecimal(MAX_MULTIPLIER));

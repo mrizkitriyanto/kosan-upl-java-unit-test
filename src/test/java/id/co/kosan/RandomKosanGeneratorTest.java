@@ -25,7 +25,8 @@ private static final double MAX_MULTIPLIER = 4.0;
 		/*https://junit.org/junit5/docs/5.4.1/api/org/junit/jupiter/api/BeforeEach.html
 		 * @BeforeEach digunakan untuk memberi sinyal bahwa metode beranotasi 
 		 * harus dijalankan sebelum setiap metode 
-		 * @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, dan @TestTemplate di kelas pengujian saat ini.
+		 * @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, dan @TestTemplate 
+		 * di kelas pengujian saat ini.
 		*/
 		@BeforeEach
 		void setup() {
@@ -73,7 +74,8 @@ private static final double MAX_MULTIPLIER = 4.0;
 		/*https://junit.org/junit5/docs/5.4.1/api/org/junit/jupiter/api/BeforeEach.html
 		 * @BeforeEach digunakan untuk memberi sinyal bahwa metode beranotasi 
 		 * harus dijalankan sebelum setiap metode 
-		 * @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, dan @TestTemplate di kelas pengujian saat ini.
+		 * @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, dan @TestTemplate 
+		 * di kelas pengujian saat ini.
 		*/
 		@BeforeEach
 		void setup() {
