@@ -8,7 +8,7 @@ public class KosanRater {
 	private static final BigDecimal BATAS_MURAH = new BigDecimal(37500.0); //Per meter persegi
 	private static final BigDecimal BATAS_NORMAL = new BigDecimal(65000.0); //Per meter persegi
 	
-	public static int rateKosan(kosan kosan) {
+	public static int rateKosan(Kosan kosan) {
 		if (kosan.getLuas() == 0.0) {
 			return -1; // Error
 		}
@@ -23,13 +23,13 @@ public class KosanRater {
 		}
 	}
 	
-	public static double calculateAverageRating(List<kosan> kosans) {
+	public static double calculateAverageRating(List<Kosan> kosans) {
 		//List Kosong akan mengembalikan nilai eksepsi
 		if (kosans.isEmpty()) {
 			throw new RuntimeException("Tidak bisa menghitung rate rata-rata untuk list yang kosong");
 		} 
 		int sumRatings = 0;
-		for (kosan kosan : kosans) {
+		for (Kosan kosan : kosans) {
 			sumRatings += rateKosan(kosan);
 		}
 		return sumRatings * 1.0 / kosans.size();	

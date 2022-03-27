@@ -24,7 +24,7 @@ public class RandomKosanGenerator {
 	}
 
 	//Fungsi Generate akan mengembalikan objek kosan random
-	public kosan generate() {
+	public Kosan generate() {
 		double maxLuas = minLuas * MAX_MULTIPLIER;
 		BigDecimal maxHargaPerMeterPersegi = minHargaPerMeterPersegi.multiply(new BigDecimal(MAX_MULTIPLIER));
 
@@ -32,6 +32,6 @@ public class RandomKosanGenerator {
 		BigDecimal hargaPerSquareMeter = minHargaPerMeterPersegi
 				.add((new BigDecimal(Math.random()).multiply(maxHargaPerMeterPersegi.subtract(minHargaPerMeterPersegi))));
 		BigDecimal harga = hargaPerSquareMeter.multiply(new BigDecimal(luas)).setScale(1, RoundingMode.FLOOR);
-		return new kosan(luas, harga);
+		return new Kosan(luas, harga);
 	}
 }

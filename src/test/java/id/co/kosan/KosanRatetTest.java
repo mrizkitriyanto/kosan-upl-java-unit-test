@@ -20,7 +20,7 @@ class KosanRatetTest {
 		// harus menggembalikan rating yang benar
 		
 		// yang di berikan
-		kosan kost1 = new kosan(luas, new BigDecimal(harga));
+		Kosan kost1 = new Kosan(luas, new BigDecimal(harga));
 		int expected = rating;
 		
 		// aktual (hasil run)
@@ -36,7 +36,7 @@ class KosanRatetTest {
 		//Harus mengembalikan  nilai error dengan masukan kosan yang salah
 		
 		// yang di berikan
-		kosan kost1 = new kosan(0.0, new BigDecimal(350000.0));
+		Kosan kost1 = new Kosan(0.0, new BigDecimal(350000.0));
 		int expected = -1;
 		
 		// aktual (hasil run)
@@ -52,10 +52,10 @@ class KosanRatetTest {
 		//Harus mengembalikan  menghitung rata-rata rating pada list
 		
 		// yang di berikan
-		List<kosan> kosts = new ArrayList<>();
-		kosts.add(new kosan(10.0, new BigDecimal(550000.0)));
-		kosts.add(new kosan(40.0, new BigDecimal(2200000.0)));
-		kosts.add(new kosan(30.0, new BigDecimal(1650000.0)));
+		List<Kosan> kosts = new ArrayList<>();
+		kosts.add(new Kosan(10.0, new BigDecimal(550000.0)));
+		kosts.add(new Kosan(40.0, new BigDecimal(2200000.0)));
+		kosts.add(new Kosan(30.0, new BigDecimal(1650000.0)));
 
 		double expected = 1.0;
 		
@@ -70,7 +70,7 @@ class KosanRatetTest {
 	void testAverageEmptyList() {
 	
 		// yang di berikan
-		List<kosan> kosts = new ArrayList<>();
+		List<Kosan> kosts = new ArrayList<>();
 		
 		// aktual (hasil run)
 		Executable executable = () -> KosanRater.calculateAverageRating(kosts);

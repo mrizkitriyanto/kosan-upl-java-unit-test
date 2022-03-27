@@ -2,11 +2,11 @@ package id.co.kosan;
 
 import java.math.BigDecimal;
 
-public class kosan {
+public class Kosan {
 	private double luas;
 	private BigDecimal harga;
 	
-	public kosan(double luas, BigDecimal harga) {
+	public Kosan(double luas, BigDecimal harga) {
 		super();
 		this.luas = luas;
 		this.harga = harga;

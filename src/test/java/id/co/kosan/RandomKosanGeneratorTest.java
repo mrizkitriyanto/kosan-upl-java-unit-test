@@ -46,7 +46,7 @@ private static final double MAX_MULTIPLIER = 4.0;
 			BigDecimal maxHargaPerMeterPersegi = minHargaPerMeterPersegi.multiply(new BigDecimal(MAX_MULTIPLIER));
 			
 			// aktual (hasil run)
-			kosan kost = generator.generate();
+			Kosan kost = generator.generate();
 			
 			// bandingkan
 			BigDecimal maxHargaKosan = new BigDecimal(kost.getLuas()).multiply(maxHargaPerMeterPersegi);
@@ -95,7 +95,7 @@ private static final double MAX_MULTIPLIER = 4.0;
 			BigDecimal maxHargaPerMeterPersegi = minHargaPerMeterPersegi.multiply(new BigDecimal(MAX_MULTIPLIER));
 			
 			// aktual (hasil run)
-			kosan kost = generator.generate();
+			Kosan kost = generator.generate();
 			
 			// bandingkan
 			BigDecimal maxHargaKosan = new BigDecimal(kost.getLuas()).multiply(maxHargaPerMeterPersegi);
