@@ -11,7 +11,7 @@ import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class KosanRatetTest {
+class KosanRaterTest {
 
 	@ParameterizedTest
 	@CsvSource(value = {"72.0, 250000.0, 0", "48.0, 2350000.0, 1", "30.0, 6000000.0, 2"})
