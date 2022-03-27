@@ -9,3 +9,11 @@ Anggota:
    - Kosan.java
    - KosanRater.java
    - RandomKosanGenerator.java
+
+## Class Under Test
+   - KosanRater.java
+   - RandomKosanGenerator.java
+
+## Test
+   - KosanRaterTest.java
+   - RandomKosanRaterTest.java
